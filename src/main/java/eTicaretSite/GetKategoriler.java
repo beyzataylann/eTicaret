@@ -9,11 +9,11 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 @WebServlet("/GetKategoriler")
 public class GetKategoriler extends HttpServlet {
@@ -25,7 +25,7 @@ public class GetKategoriler extends HttpServlet {
 	// Veritabanı bağlantı bilgileri
     private String dbURL = "jdbc:mysql://localhost:3306/eticaret";
     private String dbUser = "root";
-    private String dbPassword = "serce";
+    private String dbPassword = "123456";
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

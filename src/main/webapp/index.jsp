@@ -30,14 +30,14 @@
     <!-- Navbar Başlangıç -->
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand mx-4" id="navb" href="#home">YokYok</a>
+            <a class="navbar-brand mx-4" id="navb" href="index.jsp">Veli Express</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="mynavbar">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item mx-2">
-                        <a class="nav-link" href="#home">Anasayfa</a>
+                        <a class="nav-link" href="index.jsp">Anasayfa</a>
                     </li>
                     <li class="nav-item me-2">
                         <a class="nav-link" href="cart.jsp">Sepet ( )</a>

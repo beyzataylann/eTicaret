@@ -6,11 +6,11 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 @WebServlet("/Register")
 public class RegServlet extends HttpServlet {
@@ -28,10 +28,10 @@ public class RegServlet extends HttpServlet {
         try {
             // Veritabanı bağlantısını yap
             Class.forName("com.mysql.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/eticaret", "root", "serce");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/eticaret", "root", "123456");
 
             // Kullanıcıyı veritabanına ekle
-            stmt = conn.prepareStatement("INSERT INTO kullanicilar (ad, soyad, eposta, sifre) VALUES (?, ?, ?, ?)");
+            stmt = conn.prepareStatement("INSERT INTO kullanicilar (ad, soyad, email, sifre) VALUES (?, ?, ?, ?)");
             stmt.setString(1, firstName);
             stmt.setString(2, lastName);
             stmt.setString(3, email);
