@@ -13,7 +13,7 @@
   <body>
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand mx-4" href="index.jsp">YokYok</a>
+        <a class="navbar-brand mx-4" href="index.jsp">e-tıkla</a>
         <button
           class="navbar-toggler"
           type="button"

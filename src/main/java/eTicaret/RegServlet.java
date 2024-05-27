@@ -1,4 +1,4 @@
-package eTicaretSite;
+package eTicaret;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -6,36 +6,39 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/Register")
+@WebServlet(urlPatterns = "/Register", name = "RegServlet")
+
 public class RegServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String firstName = request.getParameter("firstName");
-        String lastName = request.getParameter("lastName");
+        String ad = request.getParameter("ad");
+        String soyad = request.getParameter("soyad");
         String email = request.getParameter("email");
-        String password = request.getParameter("password");
+        String sifre = request.getParameter("sifre");
 
         Connection conn = null;
         PreparedStatement stmt = null;
 
         try {
+        	
             // Veritabanı bağlantısını yap
-            Class.forName("com.mysql.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/eticaret", "root", "123456");
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/eticaret?useSSL=false&serverTimezone=UTC", "root", "123456");
 
             // Kullanıcıyı veritabanına ekle
-            stmt = conn.prepareStatement("INSERT INTO kullanicilar (ad, soyad, email, sifre) VALUES (?, ?, ?, ?)");
-            stmt.setString(1, firstName);
-            stmt.setString(2, lastName);
+            String sql = "INSERT INTO kullanicilar (ad, soyad, email, sifre) VALUES (?, ?, ?, ?)";
+            stmt = conn.prepareStatement(sql);
+            stmt.setString(1, ad);
+            stmt.setString(2, soyad);
             stmt.setString(3, email);
-            stmt.setString(4, password);
+            stmt.setString(4, sifre);
             stmt.executeUpdate();
 
             // Kayıt başarılı mesajını göster
@@ -46,8 +49,10 @@ public class RegServlet extends HttpServlet {
             response.getWriter().println("</script>");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
+            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Veritabanı sürücüsü bulunamadı!");
         } catch (SQLException e) {
             e.printStackTrace();
+            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Veritabanı hatası!");
         } finally {
             // Kaynakları serbest bırak
             try {

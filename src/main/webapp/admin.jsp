@@ -91,7 +91,7 @@ try {
     <!-- Navbar Başlangıç -->
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand mx-4" href="/index.html">YokYok</a>
+          <a class="navbar-brand mx-4" href="/index.html">e-tıkla</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
             <span class="navbar-toggler-icon"></span>
           </button>

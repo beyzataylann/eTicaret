@@ -30,7 +30,7 @@
     <!-- Navbar Başlangıç -->
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand mx-4" id="navb" href="index.jsp">Veli Express</a>
+            <a class="navbar-brand mx-4" id="navb" href="index.jsp">e-tıkla</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -200,4 +200,4 @@
         });
     </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js"></script>

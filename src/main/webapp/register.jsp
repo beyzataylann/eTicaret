@@ -25,7 +25,7 @@
     <!-- Navbar Başlangıç -->
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand mx-4" href="/index.html">YokYok</a>
+          <a class="navbar-brand mx-4" href="/index.jsp">e-tıkla</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -38,7 +38,7 @@
                 <a class="nav-link" href="cart.jsp">Sepet ( )</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#register">Üye Ol</a>
+                <a class="nav-link" href="register.jsp">Üye Ol</a>
               </li>
               <li class="nav-item me-4">
                 <a class="nav-link" href="login.jsp">Giriş Yap</a>
@@ -59,20 +59,20 @@
               <h3 class="text-center mb-4">Üye Ol</h3>
               <form action="Register" method="post">
                 <div class="mb-3">
-                  <label for="firstName" class="form-label">Ad</label>
-                  <input type="text" class="form-control" id="firstName" name="firstName" required>
+                  <label for="ad" class="form-label">Ad</label>
+                  <input type="text" class="form-control" id="ad" name="ad" required>
                 </div>
                 <div class="mb-3">
-                  <label for="lastName" class="form-label">Soyad</label>
-                  <input type="text" class="form-control" id="lastName" name="lastName" required>
+                  <label for="soyad" class="form-label">Soyad</label>
+                  <input type="text" class="form-control" id="soyad" name="soyad" required>
                 </div>
                 <div class="mb-3">
                   <label for="email" class="form-label">E-posta</label>
                   <input type="email" class="form-control" id="email" name="email" required>
                 </div>
                 <div class="mb-3">
-                  <label for="password" class="form-label">Şifre</label>
-                  <input type="password" class="form-control" id="password" name="password"  required>
+                  <label for="sifre" class="form-label">Şifre</label>
+                  <input type="password" class="form-control" id="sifre" name="sifre"  required>
                 </div>
                 <button type="submit" class="btn btn-success">Üye Ol</button>
               </form>

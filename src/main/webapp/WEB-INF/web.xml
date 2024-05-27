@@ -5,14 +5,18 @@
                              http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
 
-    <servlet>
+     
+     <servlet>
         <servlet-name>RegServlet</servlet-name>
-        <servlet-class>eTicaretSite.RegServlet</servlet-class>
+        <servlet-class>eTicaret.RegServlet</servlet-class>
     </servlet>
 
+    
     <servlet-mapping>
         <servlet-name>RegServlet</servlet-name>
         <url-pattern>/Register</url-pattern>
     </servlet-mapping>
+
+   
 
 </web-app>

@@ -10,4 +10,5 @@
   <installed facet="java" version="19"/>
   <installed facet="jst.web" version="4.0"/>
   <installed facet="wst.jsdt.web" version="1.0"/>
+  <installed facet="jst.web.xdoclet" version="1.2.3"/>
 </faceted-project>
